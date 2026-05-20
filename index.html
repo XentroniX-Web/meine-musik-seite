@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>XentroniX | Maximum Hardtrance</title>
+    <style>
+        * { box-sizing: border-box; }
+        body { background-color: #030508; color: #d1d9e6; font-family: 'Segoe UI', Roboto, sans-serif; margin: 0; padding: 0; overflow-x: hidden; }
+
+        header { position: fixed; top: 0; width: 100%; height: 80px; z-index: 100; display: flex; align-items: center; justify-content: center; background: rgba(3, 5, 8, 0.9); }
+        nav a { color: #ffffff; text-decoration: none; text-transform: uppercase; font-weight: 600; letter-spacing: 2px; margin: 0 15px; font-size: 0.8rem; }
+        
+        .hero-header { width: 100%; height: 70vh; border-bottom: 3px solid #00f0ff; overflow: hidden; }
+        video { width: 100%; height: 100%; object-fit: cover; filter: brightness(0.5); }
+
+        .ticker-bar { background: #ff007f; color: #fff; padding: 10px 0; overflow: hidden; white-space: nowrap; font-weight: bold; text-transform: uppercase; letter-spacing: 2px; }
+        .ticker-content { display: inline-block; padding-left: 100%; animation: ticker 15s linear infinite; }
+        @keyframes ticker { 0% { transform: translate(0, 0); } 100% { transform: translate(-100%, 0); } }
+
+        main { max-width: 1000px; width: 95%; margin: 40px auto; }
+        h2 { color: #ffffff; text-transform: uppercase; letter-spacing: 3px; margin-top: 50px; margin-bottom: 30px; }
+
+        .about-container { display: flex; gap: 40px; align-items: flex-start; }
+        .about-text { flex: 1; }
+        .about-photo { flex: 0 0 300px; }
+        .about-photo img { width: 100%; border-radius: 8px; border: 2px solid #00f0ff; }
+
+        @media (max-width: 768px) { .about-container { flex-direction: column; } }
+    </style>
+</head>
+<body>
+
+    <header>
+        <nav>
+            <a href="#releases">Releases</a>
+            <a href="#about">About</a>
+            <a href="#hamburg">Sound of Hamburg</a>
+            <a href="#booking">Booking</a>
+        </nav>
+    </header>
+
+    <div class="hero-header"><video autoplay loop muted playsinline><source src="rave.mp4" type="video/mp4"></video></div>
+    
+    <div class="ticker-bar">
+        <div class="ticker-content">+++ NÄCHSTER GIG: 15.07. CLUB XYZ, HAMBURG +++</div>
+    </div>
+
+    <main>
+        <section id="releases">
+            <h2>Releases</h2>
+            <iframe style="border-radius:12px" src="https://open.spotify.com/...2" width="100%" height="352" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+        </section>
+
+        <section id="about">
+            <h2>About XentroniX</h2>
+            <div class="about-container">
+                <div class="about-text">
+                    <p>Hier steht deine Biografie...</p>
+                </div>
+                <div class="about-photo">
+                    <img src="pressefoto.png" alt="XentroniX Pressefoto">
+                </div>
+            </div>
+        </section>
+
+        <section id="hamburg">
+            <h2>Sound of Hamburg</h2>
+            <div style="background: #090d16; padding: 20px; border-left: 4px solid #00f0ff; border-radius: 8px;">
+                <p>Hamburg ist mehr als nur eine Stadt – sie ist der Taktgeber.</p>
+            </div>
+        </section>
+
+        <section id="booking">
+            <h2>Booking</h2>
+            <div style="background: #090d16; padding: 20px; border-left: 4px solid #00f0ff; border-radius: 8px;">
+                <p>Kontakt: booking@dein-booker.de</p>
+            </div>
+        </section>
+    </main>
+</body>
+</html>
